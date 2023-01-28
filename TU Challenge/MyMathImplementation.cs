@@ -126,8 +126,20 @@ namespace TU_Challenge
 
         public static List<int> Sort(List<int> toSort)
         {
-            List<int> sortedList = new List<int>();
-            
+            List<int> sortedList = toSort;
+            for(int i = 0; i < sortedList.Count; i++)
+            {
+                int tempVal = 0;
+                for(int j = 0; j < sortedList.Count-1; j++)
+                {
+                    if (sortedList[j+1] < sortedList[j])
+                    {
+                        tempVal= sortedList[j];
+                        sortedList[j] = sortedList[j+1];
+                        sortedList[j+1] = tempVal;
+                    }
+                }
+            }
             return sortedList;
         }
     }
