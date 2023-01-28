@@ -63,6 +63,11 @@ namespace TU_Challenge
             }
         }
 
+        public static int IsInOrderDesc(int arg1, int arg2)
+        {
+            throw new NotImplementedException();
+        }
+
         public static bool IsListInOrder(List<int> list)
         {
             int direction = 0;
@@ -86,6 +91,7 @@ namespace TU_Challenge
             {
                 throw new ArgumentException();
             }
+
             if (age >= 18)
             {
                 return true;
